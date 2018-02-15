@@ -14,7 +14,8 @@ module.exports = {
       '/login': loginUser
     },
     get: {
-      '/logout': [authorizeRoute, logoutUser]
+      '/logout': [authorizeRoute, logoutUser],
+      '/confirm': [authorizeRoute, confirmToken]
     }
   }
 };

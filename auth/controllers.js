@@ -9,6 +9,13 @@ const {
 const logger = require('enmapi/common/logger');
 
 module.exports = {
+  confirmToken: async (req, res) => {
+    try {
+      res.json({ tokenConfirmed: true });
+    } catch (error) {
+      sendUserError(error, res);
+    }
+  },
   registerUser: async (req, res) => {
     try {
       const { password, firstName, lastName, email } = req.body;
