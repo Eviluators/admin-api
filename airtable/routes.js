@@ -3,7 +3,7 @@ const { authorizeRoute } = require('enmapi/services').Auth;
 
 module.exports = {
   '/airtable': {
-    middleware: authorizeRoute,
+    // middleware: authorizeRoute,
     get: {
       '/test-results': getTestResults
     }
