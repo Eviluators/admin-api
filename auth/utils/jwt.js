@@ -48,19 +48,18 @@ const generateUserToken = async (user, req) => {
 const compareUserToken = async (user, req) => {
   try {
     const reqToken = req.token;
-    console.log('Compare user token: Recieved -> ', reqToken);
+    // console.log('Compare user token: Recieved -> ', reqToken);
     if (!!!user.activeTokens || !!!reqToken)
       throw new Error('No token provided');
 
     const userToken = user.activeTokens.find(t => t.data === reqToken);
-    console.log('Compare user token: In DB -> ', userToken);
+    // console.log('Compare user token: In DB -> ', userToken);
     if (!!!userToken) throw new Error('No active tokens provided');
-    if (
-      userToken.source.deviceType !== req.device.type ||
-      userToken.source.ipAddress !== req.ip
-    ) {
-      console.log(userToken.source.deviceType, req.device.type);
-      console.log(userToken.source.ipAddress, req.ip);
+    if (userToken.source.deviceType !== req.device.type) {
+      // ||
+      // userToken.source.ipAddress !== req.ip
+      // console.log(userToken.source.deviceType, req.device.type);
+      // console.log(userToken.source.ipAddress, req.ip);
       throw new Error('Not a valid token');
     }
 
