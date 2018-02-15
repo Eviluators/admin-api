@@ -1,5 +1,3 @@
-import { resolveMx } from 'dns';
-
 const Airtable = require('airtable');
 const { sendUserError } = require('enmapi/common/errors');
 const apiKey = process.env.AIRTABLE_API_KEY;
