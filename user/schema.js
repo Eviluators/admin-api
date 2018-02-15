@@ -8,12 +8,10 @@ module.exports = {
         unique: true
       },
       firstName: {
-        type: String,
-        required: true
+        type: String
       },
       lasName: {
-        type: String,
-        required: true
+        type: String
       }
     }
   }
