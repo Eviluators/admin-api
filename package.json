@@ -1,0 +1,11 @@
+{
+  "name": "admin-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "enmapi": "^1.1.2",
+    "jwt-simple": "^0.5.1"
+  }
+}
