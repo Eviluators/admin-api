@@ -58,8 +58,11 @@ const compareUserToken = async (user, req) => {
     if (
       userToken.source.deviceType !== req.device.type ||
       userToken.source.ipAddress !== req.ip
-    )
+    ) {
+      console.log(userToken.source.deviceType, req.device.type);
+      console.log(userToken.source.ipAddress, req.ip);
       throw new Error('Not a valid token');
+    }
 
     return 'Success';
   } catch (error) {
