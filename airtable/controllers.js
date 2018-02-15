@@ -16,5 +16,6 @@ module.exports = {
     } catch (error) {
       sendUserError(error, res);
     }
-  }
+  },
+  getStudentById: async (req, res) => {}
 };
