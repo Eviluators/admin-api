@@ -2,7 +2,8 @@ const {
   registerUser,
   loginUser,
   logoutUser,
-  updateUser
+  updateUser,
+  confirmToken
 } = require('./controllers');
 const { authorizeRoute } = require('enmapi/services').Auth;
 
